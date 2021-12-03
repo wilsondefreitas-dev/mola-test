@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import styled from 'styled-components';
 import logo from './logo.png';
+import { Routes, Route, Link } from "react-router-dom";
+import Table from './componentes/Table';
 
 const RootContainer = styled.div`
 
@@ -67,15 +69,26 @@ const Footer = styled.div`
 
 function App() {
   return (
+    
     <RootContainer>
 
     <Header>
 
-    <img src={logo} alt="Mola" />
+      <img src={logo} alt="Mola" />
 
     </Header>
 
-    <Main/>
+    <Main>
+
+    <Routes>
+
+        <Route path="/" element={<Table/>} />
+
+        <Route path="details" element={<h1>oie</h1> }/>
+
+      </Routes>
+
+    </Main>
 
     <Footer>
       /by.<b>wilsondef</b>

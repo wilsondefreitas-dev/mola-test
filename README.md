@@ -6,4 +6,4 @@ run:
 
 ### `npm stary`
 
-[View](--)
+[View](https://mola-test.vercel.app/)

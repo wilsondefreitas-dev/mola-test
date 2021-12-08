@@ -6,4 +6,4 @@ run:
 
 ### `npm stary`
 
-[View](https://mola-test.vercel.app/)
+Click to [View](https://mola-test.vercel.app/) Web App.

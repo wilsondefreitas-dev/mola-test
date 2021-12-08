@@ -1,9 +1,8 @@
-import React from 'react';
-import './App.css';
 import styled from 'styled-components';
 import logo from './logo.png';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Table from './componentes/Table';
+import Details from './componentes/Details';
 
 const RootContainer = styled.div`
 
@@ -59,9 +58,17 @@ const Footer = styled.div`
   width: 100vw;
   color: white;
 
-  b{
+  a{
 
+    text-decoration: none;
     color: #db2e65;
+    font-weight: bold;
+
+  }
+
+  a:hover{
+
+    color: #dd93aa;
 
   }
 
@@ -72,27 +79,32 @@ function App() {
     
     <RootContainer>
 
-    <Header>
+      <Header>
 
-      <img src={logo} alt="Mola" />
+        <a target="_blank" rel="noreferrer" href="https://molacorban.com.br/">
+          <img src={logo} alt="Mola" />
+        </a>
 
-    </Header>
+      </Header>
 
-    <Main>
 
-    <Routes>
+      <Main>
 
-        <Route path="/" element={<Table/>} />
+        <Routes>
 
-        <Route path="details" element={<h1>oie</h1> }/>
+          <Route path="/" element={<Table/>} />
+          <Route path="details" element={<Details/>}/>
 
-      </Routes>
+        </Routes>
 
-    </Main>
+      </Main>
 
-    <Footer>
-      /by.<b>wilsondef</b>
-    </Footer>
+
+      <Footer> 
+
+        /by.<a target="_blank" rel="noreferrer" href="https://github.com/wilsondefreitas-dev">wilsondef</a> 
+        
+      </Footer>
 
     </RootContainer>
   );
